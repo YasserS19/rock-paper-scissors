@@ -1,12 +1,30 @@
+const selections = ["rock", "paper", "scissors"];
 let play_again = "y";
-let selections = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let cpuScore = 0;
 while (play_again !== "n") {
-  let rounds = parseInt(prompt("How many rounds would you like to play?"));
-  for (let i = 0; i < rounds; i++) {
-    let playerSelection = prompt("Choose your hand: Rock, Paper or Scissors.");
-    const cpuSelection = selections[Math.floor(Math.random() * 3)];
+  const rounds = parseInt(prompt("How many rounds would you like to play?"));
+  const playerSelection = prompt(
+    "Choose your hand: Rock, Paper or Scissors."
+  ).toLowerCase();
+  const cpuSelection = getComputerChoice();
+  playRound(playerSelection.toLowerCase(), cpuSelection, rounds);
+
+  if (playerScore > cpuScore) {
+    alert("Player wins the game!");
+  } else if (playerScore < cpuScore) {
+    alert("CPU wins the game!");
+  } else {
+    alert("The game is a draw!");
+  }
+  play_again = prompt("Play again ? [y/n]:").toLowerCase();
+}
+
+function getComputerChoice() {
+  return selections[Math.floor(Math.random() * 3)];
+}
+function playRound(playerSelection, cpuSelection, rounds) {
+  for (let _ = 0; _ < rounds; _++) {
     alert(`Player choose: ${playerSelection}`);
 
     if (!selections.includes(playerSelection)) {
@@ -46,12 +64,4 @@ while (play_again !== "n") {
       cpuScore += 1;
     }
   }
-  if (playerScore > cpuScore) {
-    alert("Player wins the game!");
-  } else if (playerScore < cpuScore) {
-    alert("CPU wins the game!");
-  } else {
-    alert("The game is a draw!");
-  }
-  play_again = prompt("Play again ? [y/n]:");
 }
