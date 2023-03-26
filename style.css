@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "MotivaSans";
+  src: url("assets/MotivaSans.woff");
+}
+
+@font-face {
+  font-family: "SevenSegment";
+  src: url("assets/SevenSegment.ttf");
+}
+
+body {
+  font-family: "MotivaSans", sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-height: 12vh;
+}
+
+.header h1 {
+  font-size: 2em;
+}
+
+.score-board {
+  flex: 1;
+  display: flex;
+  max-height: 12vh;
+  font-weight: 700;
+  align-items: center;
+  font-size: 2.5em;
+}
+
+.computer,
+.player {
+  width: 12em;
+  text-align: center;
+}
+
+.separator {
+  width: 2em;
+  text-align: center;
+}
+
+.score {
+  font-size: 2em;
+  font-family: "SevenSegment";
+  text-align: center;
+}
+
+.facts {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-height: 10vh;
+  font-size: 1.75em;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-choices {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.choices button {
+  border-radius: 0.5rem;
+  font-size: 4em;
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  border: 0.1em solid #757575;
+  background-color: #252525;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.choices button:hover {
+  transform: scale(1.2);
+}
+
+
+.computer-hand {
+  margin: 0 0.5em;
+  font-size: 3em;
+  border-radius: 0.5rem;
+  border: 0.13em solid #757575;
+  background-color: #252525;
+  color: #333;
+  width: 3.5em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.computer-choice p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  font-size: 1.75em;
+}
+
+.computer-choice {
+  margin: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  padding: 0.5em;
+  font-size: 1.25em;
+  margin-top: auto;
+}
+
+footer a {
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+footer img {
+  height: 1em;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+footer img:hover {
+  transform: rotate(360deg) scale(1.2);
+}
