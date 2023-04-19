@@ -91,9 +91,15 @@ function endGame() {
   if (response) {
     facts.textContent = "Your turn, please choose a hand.";
     ComputerChoice.textContent = "Computer plays...";
-    playerScore, (computerScore = 0);
-    playerScoreboard.textContent, (computerScoreboard.textContent = 0);
+    resetScores();
   } else {
     alert("Thanks for playing!");
+    resetScores();
+  }
+  function resetScores() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreboard.textContent = 0;
+    computerScoreboard.textContent = 0;
   }
 }
